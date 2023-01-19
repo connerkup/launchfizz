@@ -1,0 +1,10 @@
+extends ../layouts/main
+
+block content
+    h1 Generate Product Description
+    form(action='/api/generate', method='POST')
+        label(for='product-description') Product Description:
+        textarea#product-description(name='product-description', rows='5', cols='30')
+        br
+        input(type='submit', value='Generate')
+    div#generated-description
